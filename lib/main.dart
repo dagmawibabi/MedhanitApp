@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:medhanit/pages/homepage.dart';
+import 'package:medhanit/pages/loginpage.dart';
+import 'package:medhanit/pages/onlineorofflinepage.dart';
 import 'package:medhanit/pages/viewimagepage.dart';
 
 void main() {
@@ -29,7 +31,9 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/": (context) => HomePage(),
+        "/": (context) => LoginPage(),
+        "onOrOfflinePage": (context) => OnOrOfflinePage(),
+        "homePage": (context) => HomePage(),
         "viewImagesPage": (context) => ViewImagesPage(),
       },
       theme: ThemeData(
