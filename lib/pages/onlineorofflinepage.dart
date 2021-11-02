@@ -45,7 +45,7 @@ class _OnOrOfflinePageState extends State<OnOrOfflinePage> {
               const SizedBox(height: 25.0),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "homePage");
+                  Navigator.pushNamed(context, "homePage");
                 },
                 style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all(Size(160.0, 35.0))),
@@ -60,7 +60,7 @@ class _OnOrOfflinePageState extends State<OnOrOfflinePage> {
               const SizedBox(height: 5.0),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "onOrOfflinePage");
+                  Navigator.pushNamed(context, "offlinePage");
                 },
                 style: ButtonStyle(
                     fixedSize: MaterialStateProperty.all(Size(160.0, 35.0))),

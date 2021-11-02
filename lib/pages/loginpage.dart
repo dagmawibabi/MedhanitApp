@@ -17,8 +17,8 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.grey[300],
       body: Container(
         alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        color: Colors.grey,
+        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+        color: Color(0xffF0D4E0),
         child: Container(
           decoration: BoxDecoration(
             border: Border.all(
@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             color: Colors.black.withOpacity(0.7),
           ),
-          height: 280.0,
+          height: 300.0,
           padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 40.0),
           child: Column(
             children: [

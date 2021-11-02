@@ -32,6 +32,7 @@ dependencies:
   http: ^0.13.4
   url_launcher: ^6.0.12
   photo_view: ^0.13.0
+  widget_circular_animator: ^1.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -76,10 +77,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Abel
+      fonts:
+        - asset: assets/fonts/Abel-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

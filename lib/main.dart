@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:medhanit/pages/homepage.dart';
 import 'package:medhanit/pages/loginpage.dart';
+import 'package:medhanit/pages/offlinePage.dart';
 import 'package:medhanit/pages/onlineorofflinepage.dart';
 import 'package:medhanit/pages/viewimagepage.dart';
 
@@ -35,8 +36,10 @@ class _MyAppState extends State<MyApp> {
         "onOrOfflinePage": (context) => OnOrOfflinePage(),
         "homePage": (context) => HomePage(),
         "viewImagesPage": (context) => ViewImagesPage(),
+        "offlinePage": (context) => OffLinePage(),
       },
       theme: ThemeData(
+        fontFamily: "Abel",
         scaffoldBackgroundColor: Colors.transparent, //Colors.grey[200],
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.black
