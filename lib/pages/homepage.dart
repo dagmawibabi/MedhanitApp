@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:ui';
+import 'package:animated_background/animated_background.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +15,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   // Functions for main feed
   List mainFeed = [];
   void getFeed() async {
@@ -148,20 +150,20 @@ class _HomePageState extends State<HomePage> {
             ),
             label: "Mood",
           ),
-          BottomNavigationBarItem(
+          /*BottomNavigationBarItem(
             icon: Icon(
               Icons.chat_outlined,
             ),
             label: "Chat",
-          ),
+          ),*/
         ],
       ),
-      floatingActionButton: FloatingActionButton(
+      /*floatingActionButton: FloatingActionButton(
         child: const Icon(
           Icons.chat_outlined,
         ),
         onPressed: () {},
-      ),
+      ),*/
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
@@ -179,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                   Color(curMoodColor),
                   Color(curMoodColor),
                   Color(curMoodColor),
-                  Color(0xffaaffaa),
+                  //Color(0xffaaffaa),
                 ]
               : [
                   Colors.white,
@@ -260,138 +262,142 @@ class _HomePageState extends State<HomePage> {
   }
 
 // MAIN FEED
-  Container mainfeed(BuildContext context) {
-    return Container(
-      decoration: isFetching == false
-          ? BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(scaffoldBG.toString(), scale: 1.0),
-                fit: BoxFit.cover,
-              ),
-            )
-          : BoxDecoration(color: Colors.grey[200]),
-      child: ListView(
-        children: [
-          // Headlines
-          Container(
-            height: MediaQuery.of(context).size.height + 200,
-            padding: const EdgeInsets.only(bottom: 300),
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: mainFeed.length,
-              itemBuilder: (context, index) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      //width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                        ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(25.0),
-                        ),
-                        color: Colors.black.withOpacity(0.7),
-                      ),
-                      padding: const EdgeInsets.all(20.0),
-                      margin: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Title
-                          Text(
-                            mainFeed[index]["title"],
-                            style: TextStyle(
-                              color: Colors.grey[300],
-                              fontSize: 22.0,
-                            ),
-                            textAlign: TextAlign.start,
+  AnimatedBackground mainfeed(BuildContext context) {
+    return AnimatedBackground(
+      vsync: this,
+      behaviour: isFetching == true ? SpaceBehaviour() : EmptyBehaviour(),
+      child: Container(
+        decoration: isFetching == false
+            ? BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(scaffoldBG.toString(), scale: 1.0),
+                  fit: BoxFit.cover,
+                ),
+              )
+            : BoxDecoration(color: Colors.transparent),
+        child: ListView(
+          children: [
+            // Headlines
+            Container(
+              height: MediaQuery.of(context).size.height + 200,
+              padding: const EdgeInsets.only(bottom: 300),
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: mainFeed.length,
+                itemBuilder: (context, index) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        //width: double.infinity,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.white,
                           ),
-                          const SizedBox(height: 10.0),
-                          // Body
-                          Text(
-                            mainFeed[index]["body"],
-                            style: TextStyle(
-                              color: Colors.grey[400],
-                            ),
-                            textAlign: TextAlign.start,
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(25.0),
                           ),
-                          const SizedBox(height: 10.0),
-                          // Image
-                          mainFeed[index]["image"] != 0
-                              ? Container(
-                                  clipBehavior: Clip.hardEdge,
-                                  decoration: BoxDecoration(
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(25.0),
-                                    ),
-                                    color: Colors.blue.withOpacity(0.9),
-                                  ),
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      Navigator.pushNamed(
-                                        context,
-                                        "viewImagesPage",
-                                        arguments: {
-                                          "networkImage": mainFeed[index]
-                                              ["image"],
-                                          "scaffoldBG": scaffoldBG,
-                                        },
-                                      );
-                                    },
-                                    child: Image.network(
-                                      mainFeed[index]["image"],
-                                      fit: BoxFit.contain,
-                                    ),
-                                  ),
-                                )
-                              : Container(),
-                          const SizedBox(height: 10.0),
-                          // Music
-                          mainFeed[index]["music"] != 0
-                              ? GestureDetector(
-                                  onTap: () {
-                                    launchSong(mainFeed[index]["music"]);
-                                  },
-                                  child: Container(
+                          color: Colors.black.withOpacity(0.7),
+                        ),
+                        padding: const EdgeInsets.all(20.0),
+                        margin: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Title
+                            Text(
+                              mainFeed[index]["title"],
+                              style: TextStyle(
+                                color: Colors.grey[300],
+                                fontSize: 22.0,
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            const SizedBox(height: 10.0),
+                            // Body
+                            Text(
+                              mainFeed[index]["body"],
+                              style: TextStyle(
+                                color: Colors.grey[400],
+                              ),
+                              textAlign: TextAlign.start,
+                            ),
+                            const SizedBox(height: 10.0),
+                            // Image
+                            mainFeed[index]["image"] != 0
+                                ? Container(
+                                    clipBehavior: Clip.hardEdge,
                                     decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Colors.blue,
-                                      ),
                                       borderRadius: const BorderRadius.all(
                                         Radius.circular(25.0),
                                       ),
-                                      color: Colors.blue.withOpacity(0.8),
+                                      color: Colors.blue.withOpacity(0.9),
                                     ),
-                                    padding: const EdgeInsets.only(
-                                        left: 8.0,
-                                        right: 16.0,
-                                        top: 4.0,
-                                        bottom: 4.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: const [
-                                        Icon(Icons.attach_file_outlined),
-                                        Text("Open Attachment"),
-                                      ],
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                          context,
+                                          "viewImagesPage",
+                                          arguments: {
+                                            "networkImage": mainFeed[index]
+                                                ["image"],
+                                            "scaffoldBG": scaffoldBG,
+                                          },
+                                        );
+                                      },
+                                      child: Image.network(
+                                        mainFeed[index]["image"],
+                                        fit: BoxFit.contain,
+                                      ),
                                     ),
-                                  ),
-                                )
-                              : Container(),
-                        ],
+                                  )
+                                : Container(),
+                            const SizedBox(height: 10.0),
+                            // Music
+                            mainFeed[index]["music"] != 0
+                                ? GestureDetector(
+                                    onTap: () {
+                                      launchSong(mainFeed[index]["music"]);
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.blue,
+                                        ),
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(25.0),
+                                        ),
+                                        color: Colors.blue.withOpacity(0.8),
+                                      ),
+                                      padding: const EdgeInsets.only(
+                                          left: 8.0,
+                                          right: 16.0,
+                                          top: 4.0,
+                                          bottom: 4.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: const [
+                                          Icon(Icons.attach_file_outlined),
+                                          Text("Open Attachment"),
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                : Container(),
+                          ],
+                        ),
                       ),
-                    ),
-                    index + 1 == mainFeed.length
-                        ? const SizedBox(height: 900.0)
-                        : Container(),
-                  ],
-                );
-              },
+                      index + 1 == mainFeed.length
+                          ? const SizedBox(height: 900.0)
+                          : Container(),
+                    ],
+                  );
+                },
+              ),
             ),
-          ),
-          const SizedBox(height: 200.0),
-        ],
+            const SizedBox(height: 200.0),
+          ],
+        ),
       ),
     );
   }

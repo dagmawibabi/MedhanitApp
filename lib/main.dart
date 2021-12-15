@@ -4,6 +4,11 @@ import 'package:medhanit/pages/homepage.dart';
 import 'package:medhanit/pages/loginpage.dart';
 import 'package:medhanit/pages/offlinePage.dart';
 import 'package:medhanit/pages/onlineorofflinepage.dart';
+import 'package:medhanit/pages/page1.dart';
+import 'package:medhanit/pages/page2.dart';
+import 'package:medhanit/pages/page3.dart';
+import 'package:medhanit/pages/page4.dart';
+import 'package:medhanit/pages/page5.dart';
 import 'package:medhanit/pages/viewimagepage.dart';
 
 void main() {
@@ -37,6 +42,11 @@ class _MyAppState extends State<MyApp> {
         "homePage": (context) => HomePage(),
         "viewImagesPage": (context) => ViewImagesPage(),
         "offlinePage": (context) => OffLinePage(),
+        "page1": (context) => Page1(),
+        "page2": (context) => Page2(),
+        "page3": (context) => Page3(),
+        "page4": (context) => Page4(),
+        "page5": (context) => Page5(),
       },
       theme: ThemeData(
         fontFamily: "Abel",
