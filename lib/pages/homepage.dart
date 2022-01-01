@@ -342,6 +342,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                             "networkImage": mainFeed[index]
                                                 ["image"],
                                             "scaffoldBG": scaffoldBG,
+                                            "isAsset": false,
                                           },
                                         );
                                       },

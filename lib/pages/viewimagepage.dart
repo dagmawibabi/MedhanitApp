@@ -14,17 +14,20 @@ class _ViewImagesPageState extends State<ViewImagesPage> {
     dynamic receivedData = ModalRoute.of(context)?.settings.arguments;
     String networkImage = receivedData["networkImage"];
     String scaffoldBG = receivedData["scaffoldBG"];
+    bool isAsset = receivedData["isAsset"];
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: isAsset == false ? Colors.grey[300] : Colors.greenAccent,
       extendBody: true,
       //appBar: AppBar(),
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: NetworkImage(scaffoldBG.toString(), scale: 1.0),
-            fit: BoxFit.cover,
-          ),
-        ),
+        decoration: isAsset == false
+            ? BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(scaffoldBG.toString(), scale: 1.0),
+                  fit: BoxFit.cover,
+                ),
+              )
+            : BoxDecoration(),
         child: Container(
           //height: MediaQuery.of(context).size.height + 200,
           child: Column(
@@ -54,15 +57,21 @@ class _ViewImagesPageState extends State<ViewImagesPage> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height - 200,
-                child: PhotoView(
-                  imageProvider: NetworkImage(
-                    networkImage,
-                  ),
-                  initialScale: 1.0,
-                  backgroundDecoration: const BoxDecoration(
-                    color: Colors.transparent,
-                  ),
-                ),
+                child: isAsset == false
+                    ? PhotoView(
+                        imageProvider: NetworkImage(networkImage),
+                        initialScale: 1.0,
+                        backgroundDecoration: const BoxDecoration(
+                          color: Colors.transparent,
+                        ),
+                      )
+                    : PhotoView(
+                        imageProvider: AssetImage(networkImage),
+                        initialScale: 0.5,
+                        backgroundDecoration: const BoxDecoration(
+                          color: Colors.transparent,
+                        ),
+                      ),
               ),
             ],
           ),

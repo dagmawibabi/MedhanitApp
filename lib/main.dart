@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "offlinePage",
+      initialRoute: "onOrOfflinePage",
       routes: {
         "/": (context) => LoginPage(),
         "onOrOfflinePage": (context) => OnOrOfflinePage(),
