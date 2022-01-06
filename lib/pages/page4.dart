@@ -12,7 +12,7 @@ class _Page4State extends State<Page4> {
   dynamic player;
   void musicPlayer() async {
     player = AudioPlayer();
-    var duration = await player.setAsset("assets/music/LDRSong.mp3");
+    var duration = await player.setAsset("assets/music/Dandelions.mp3");
     player.play();
   }
 
@@ -46,14 +46,15 @@ class _Page4State extends State<Page4> {
                     const SizedBox(height: 100.0),
                     // Main Title
                     const Text(
-                      "Med... 📝",
+                      "⏲ 🖼 ⏳ \n Ride along memory lane",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 20.0),
+                    const SizedBox(height: 30.0),
                     // Circular Image
                     Container(
                       width: 280.0,
@@ -68,34 +69,49 @@ class _Page4State extends State<Page4> {
                       child: FittedBox(
                         fit: BoxFit.cover,
                         child: Image.asset(
-                          "assets/images/15.jpg",
+                          "assets/images/100.jpg",
                         ),
                       ),
                     ),
-                    const SizedBox(height: 100.0),
+                    const SizedBox(height: 30.0),
                     // First Paragraph
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "Hey beautiful, how bout I try to melt you down huh... ☺ \n",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    // Hint
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 30.0, vertical: 10.0),
                       alignment: Alignment.center,
                       child: const Text(
-                        "Since you are an arc student I figured why not try to speak ur language. \n",
+                        "You can click on the images to open them",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 16.0,
                         ),
                       ),
                     ),
+                    const SizedBox(height: 40.0),
                     // Arc Memes
                     // ArcMeme #1
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 30.0, vertical: 10.0),
-                      alignment: Alignment.center,
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Since you are an arc student I figured why not try to speak ur language.",
-                        textAlign: TextAlign.center,
+                        "Get it? Stair? 👀... \nwell technically drown in your dreamy eyes but u get my point",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 20.0,
@@ -108,21 +124,22 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/removeBG11.jpg",
+                            "networkImage": "assets/images/arcMeme2.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/removeBG11.jpg"),
+                      child: Image.asset("assets/images/arcMeme2.jpg"),
                     ),
+                    const SizedBox(height: 40.0),
                     // ArcMeme #2
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 30.0, vertical: 10.0),
-                      alignment: Alignment.center,
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Since you are an arc student I figured why not try to speak ur language.",
+                        "You complete me babe... 🧩",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.black,
@@ -136,22 +153,23 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/removeBG22.jpg",
+                            "networkImage": "assets/images/17.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/removeBG22.jpg"),
+                      child: Image.asset("assets/images/17.jpg"),
                     ),
+                    const SizedBox(height: 40.0),
                     // ArcMeme #3
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 30.0, vertical: 10.0),
-                      alignment: Alignment.center,
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Since you are an arc student I figured why not try to speak ur language.",
-                        textAlign: TextAlign.center,
+                        "Well I sometimes feel like an engineer with the way we plan to make things work and it's so cute of us. 😊",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 20.0,
@@ -164,22 +182,23 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/mark.jpg",
+                            "networkImage": "assets/images/arcMeme3.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/mark.jpg"),
+                      child: Image.asset("assets/images/arcMeme3.jpg"),
                     ),
+                    const SizedBox(height: 40.0),
                     // ArcMeme #4
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 30.0, vertical: 10.0),
-                      alignment: Alignment.center,
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Since you are an arc student I figured why not try to speak ur language.",
-                        textAlign: TextAlign.center,
+                        "Form follows heart, and our hearts long for eachother! ♥",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 20.0,
@@ -192,22 +211,23 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/100.jpg",
+                            "networkImage": "assets/images/arcMeme4.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/100.jpg"),
+                      child: Image.asset("assets/images/arcMeme4.jpg"),
                     ),
-                    // ArcMeme #5 - Compare last hug and first hug here in addis
+                    const SizedBox(height: 40.0),
+                    // ArcMeme #5
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 30.0, vertical: 10.0),
-                      alignment: Alignment.center,
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Since you are an arc student I figured why not try to speak ur language.",
-                        textAlign: TextAlign.center,
+                        "Also babe, You can 'lean' on me on your horrible days! I got you! 😉",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 20.0,
@@ -220,18 +240,19 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/11.jpg",
+                            "networkImage": "assets/images/arcMeme5.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/11.jpg"),
+                      child: Image.asset("assets/images/arcMeme5.jpg"),
                     ),
                     const SizedBox(height: 100.0),
                     // Continue Button
                     ElevatedButton(
                       onPressed: () {
+                        //player.pause();
                         Navigator.pushNamed(context, "page2");
                       },
                       child: const Text(
