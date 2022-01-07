@@ -32,7 +32,7 @@ class _Page4State extends State<Page4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.tealAccent[400],
       body: ListView(
         children: [
           Column(
@@ -79,7 +79,7 @@ class _Page4State extends State<Page4> {
                       padding: const EdgeInsets.symmetric(horizontal: 30.0),
                       alignment: Alignment.center,
                       child: const Text(
-                        "Hey beautiful, how bout I try to melt you down huh... ☺ \n",
+                        "Hey beautiful, how bout I try to melt you down huh? ... ☺ \n",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.black,
@@ -110,36 +110,7 @@ class _Page4State extends State<Page4> {
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Get it? Stair? 👀... \nwell technically drown in your dreamy eyes but u get my point",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20.0,
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          "viewImagesPage",
-                          arguments: {
-                            "networkImage": "assets/images/arcMeme2.jpg",
-                            "scaffoldBG": "Colors.greenAccent",
-                            "isAsset": true,
-                          },
-                        );
-                      },
-                      child: Image.asset("assets/images/arcMeme2.jpg"),
-                    ),
-                    const SizedBox(height: 40.0),
-                    // ArcMeme #2
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10.0),
-                      alignment: Alignment.centerLeft,
-                      child: const Text(
-                        "You complete me babe... 🧩",
+                        "You are miles away but no one's closer to my heart than you! Loving you even tho I don't see you everyday is not a bad thing, it's just proof to the world that love is not in sight but in the heart! 🧩",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.black,
@@ -153,13 +124,42 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/17.jpg",
+                            "networkImage": "assets/images/collage2.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/17.jpg"),
+                      child: Image.asset("assets/images/collage2.jpg"),
+                    ),
+                    const SizedBox(height: 40.0),
+                    // ArcMeme #2
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        "Yes i'm awkward, but what's even sweeter is that you've fallen in love with my awkwardness! 😂",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "viewImagesPage",
+                          arguments: {
+                            "networkImage": "assets/images/collage1.jpg",
+                            "scaffoldBG": "Colors.greenAccent",
+                            "isAsset": true,
+                          },
+                        );
+                      },
+                      child: Image.asset("assets/images/collage1.jpg"),
                     ),
                     const SizedBox(height: 40.0),
                     // ArcMeme #3
@@ -168,7 +168,7 @@ class _Page4State extends State<Page4> {
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Well I sometimes feel like an engineer with the way we plan to make things work and it's so cute of us. 😊",
+                        "These are the two hug I just didn't want to let go! First is my last goodbye before I moved to addis, and the second is our first hug afters years of not getting eachother!",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
@@ -182,13 +182,13 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/arcMeme3.jpg",
+                            "networkImage": "assets/images/collage3.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/arcMeme3.jpg"),
+                      child: Image.asset("assets/images/collage3.jpg"),
                     ),
                     const SizedBox(height: 40.0),
                     // ArcMeme #4
@@ -197,7 +197,36 @@ class _Page4State extends State<Page4> {
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Form follows heart, and our hearts long for eachother! ♥",
+                        "These are the two hugs I just didn't want to let go off! First is my last goodbye before I moved to addis, and the second is our first hug afters years of not getting eachother! 🤗",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "viewImagesPage",
+                          arguments: {
+                            "networkImage": "assets/images/collage4.jpg",
+                            "scaffoldBG": "Colors.greenAccent",
+                            "isAsset": true,
+                          },
+                        );
+                      },
+                      child: Image.asset("assets/images/collage4.jpg"),
+                    ),
+                    const SizedBox(height: 40.0),
+                    // ArcMeme #5
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        "Babe, I may not be your first date, kiss or love. but I want to be your last everything. You are the one I want to die knowing I've loved and married. 😉",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
@@ -211,16 +240,15 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/arcMeme4.jpg",
+                            "networkImage": "assets/images/collage5.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/arcMeme4.jpg"),
+                      child: Image.asset("assets/images/collage5.jpg"),
                     ),
-                    const SizedBox(height: 40.0),
-                    // ArcMeme #5
+                    // ArcMeme #6
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 10.0),
@@ -240,13 +268,41 @@ class _Page4State extends State<Page4> {
                           context,
                           "viewImagesPage",
                           arguments: {
-                            "networkImage": "assets/images/arcMeme5.jpg",
+                            "networkImage": "assets/images/collage7.jpg",
                             "scaffoldBG": "Colors.greenAccent",
                             "isAsset": true,
                           },
                         );
                       },
-                      child: Image.asset("assets/images/arcMeme5.jpg"),
+                      child: Image.asset("assets/images/collage7.jpg"),
+                    ),
+                    // ArcMeme #7
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        "Also babe, You can 'lean' on me on your horrible days! I got you! 😉",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "viewImagesPage",
+                          arguments: {
+                            "networkImage": "assets/images/collage8.jpg",
+                            "scaffoldBG": "Colors.greenAccent",
+                            "isAsset": true,
+                          },
+                        );
+                      },
+                      child: Image.asset("assets/images/collage8.jpg"),
                     ),
                     const SizedBox(height: 100.0),
                     // Continue Button

@@ -32,7 +32,7 @@ class _Page3State extends State<Page3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Colors.tealAccent[400],
       body: ListView(
         children: [
           Column(

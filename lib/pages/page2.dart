@@ -140,7 +140,7 @@ class _Page2State extends State<Page2> with TickerProviderStateMixin {
               isRaining == false
                   ? ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, "page3");
+                        Navigator.pushNamed(context, "page5");
                       },
                       child: const Text(
                         "Click here to the next page! ",

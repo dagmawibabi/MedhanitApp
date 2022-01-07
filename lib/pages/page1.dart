@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -12,9 +14,17 @@ class _Page1State extends State<Page1> {
   AudioPlayer player = AudioPlayer();
   void musicPlayer() async {
     player = AudioPlayer();
-    var duration = await player.setAsset("assets/music/LDRSong.mp3");
+    List songs = [
+      "assets/music/ChasingCars.mp3",
+      "assets/music/Dandelions.mp3",
+      "assets/music/ItsYou.mp3",
+      "assets/music/LDRSong.mp3",
+    ];
+    Random random = Random();
+    String song = songs[random.nextInt(songs.length - 1)];
+    var duration = await player.setAsset(song);
     player.setLoopMode(LoopMode.one);
-    player.play();
+    //player.play();
   }
 
   @override
@@ -67,7 +77,7 @@ class _Page1State extends State<Page1> {
                       child: FittedBox(
                         fit: BoxFit.cover,
                         child: Image.asset(
-                          "assets/images/100.jpg", // Pic102
+                          "assets/images/removeBG33.jpg", // Pic102
                         ),
                       ),
                     ),
