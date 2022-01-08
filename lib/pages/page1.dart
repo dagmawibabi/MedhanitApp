@@ -22,9 +22,9 @@ class _Page1State extends State<Page1> {
     ];
     Random random = Random();
     String song = songs[random.nextInt(songs.length - 1)];
-    var duration = await player.setAsset(song);
+    var duration = await player.setAsset("assets/music/LDRSong.mp3");
     player.setLoopMode(LoopMode.one);
-    //player.play();
+    player.play();
   }
 
   @override

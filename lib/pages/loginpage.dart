@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
               children: [
                 //const SizedBox(height: 250.0),
                 Text(
-                  "Gebremedhn",
+                  "Merissa",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,

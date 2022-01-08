@@ -110,11 +110,11 @@ class _Page4State extends State<Page4> {
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "You are miles away but no one's closer to my heart than you! Loving you even tho I don't see you everyday is not a bad thing, it's just proof to the world that love is not in sight but in the heart! 🧩",
-                        textAlign: TextAlign.center,
+                        "You are miles away but no one's closer to my heart than you! Loving you even tho I don't see you everyday is not a bad thing, it's just proof to the world that love is not in sight but in the heart! ♥",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -132,18 +132,18 @@ class _Page4State extends State<Page4> {
                       },
                       child: Image.asset("assets/images/collage2.jpg"),
                     ),
-                    const SizedBox(height: 40.0),
+                    const SizedBox(height: 60.0),
                     // ArcMeme #2
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "Yes i'm awkward, but what's even sweeter is that you've fallen in love with my awkwardness! 😂",
-                        textAlign: TextAlign.center,
+                        "Yes I'm awkward, but what's even sweeter is that you've fallen in love with my awkwardness! And I for yours. I just can't wait for so many cringe and awkward moments in life with you. 😂",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -161,18 +161,18 @@ class _Page4State extends State<Page4> {
                       },
                       child: Image.asset("assets/images/collage1.jpg"),
                     ),
-                    const SizedBox(height: 40.0),
+                    const SizedBox(height: 60.0),
                     // ArcMeme #3
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "These are the two hug I just didn't want to let go! First is my last goodbye before I moved to addis, and the second is our first hug afters years of not getting eachother!",
+                        "I choose you today, I choose you tomorrow, and I'll choose you for forever. It's funny that I think 1 lifetime with you is just not enough. And that I pray that God unites us in the life after. I can't get enough of you. I crave you med. 😋",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -190,18 +190,105 @@ class _Page4State extends State<Page4> {
                       },
                       child: Image.asset("assets/images/collage3.jpg"),
                     ),
-                    const SizedBox(height: 40.0),
+                    const SizedBox(height: 60.0),
                     // ArcMeme #4
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15.0, vertical: 10.0),
                       alignment: Alignment.centerLeft,
                       child: const Text(
-                        "These are the two hugs I just didn't want to let go off! First is my last goodbye before I moved to addis, and the second is our first hug afters years of not getting eachother! 🤗",
-                        textAlign: TextAlign.center,
+                        "I am nothing special, just a common man with common thoughts, and I’ve led a common life. There are no monuments dedicated to me and my name will soon be forgotten. But in one aspect of my life I have succeeded as gloriously as anyone who’s ever lived: I’ve loved you with all my heart and soul; and i'm lucky and blessed enough to be loved back by you. And even on the days you didn't, it was still enough for me! 💙",
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "viewImagesPage",
+                          arguments: {
+                            "networkImage": "assets/images/collage8.jpg",
+                            "scaffoldBG": "Colors.greenAccent",
+                            "isAsset": true,
+                          },
+                        );
+                      },
+                      child: Image.asset("assets/images/collage8.jpg"),
+                    ),
+                    const SizedBox(height: 60.0),
+                    // ArcMeme #5
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        "Babe, I may not be your first date, kiss or love. but I want to be your last everything. You are the one I want to die knowing I've loved and married. I could start a fire with what I feel for you babe! 🔥",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "viewImagesPage",
+                          arguments: {
+                            "networkImage": "assets/images/collage5.jpg",
+                            "scaffoldBG": "Colors.greenAccent",
+                            "isAsset": true,
+                          },
+                        );
+                      },
+                      child: Image.asset("assets/images/collage5.jpg"),
+                    ),
+                    const SizedBox(height: 60.0),
+                    // ArcMeme #6
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        "We've persevered throughout these years babe. Went from groing out to meet eachother with family and friends to travelling to different cities to get eachother. And that's so sweet. You are so much more worth the effort. My heart falls in love with you over and over again as if it never fell for anyone. I want you with me in a home we'll build together. But anywhere's home as long as you're there. You're home to me! 🏡",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          "viewImagesPage",
+                          arguments: {
+                            "networkImage": "assets/images/collage7.jpg",
+                            "scaffoldBG": "Colors.greenAccent",
+                            "isAsset": true,
+                          },
+                        );
+                      },
+                      child: Image.asset("assets/images/collage7.jpg"),
+                    ),
+                    const SizedBox(height: 60.0),
+                    // ArcMeme #7
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 10.0),
+                      alignment: Alignment.centerLeft,
+                      child: const Text(
+                        "These are the two hugs I just didn't want to let go off! First is my last goodbye before I moved to addis, and the second is our first hug afters years of not getting eachother! I wanted to stop time and hold you in my arms like that for forever! 🤗",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -220,89 +307,33 @@ class _Page4State extends State<Page4> {
                       child: Image.asset("assets/images/collage4.jpg"),
                     ),
                     const SizedBox(height: 40.0),
-                    // ArcMeme #5
+                    // Final text
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10.0),
-                      alignment: Alignment.centerLeft,
+                          horizontal: 20.0, vertical: 10.0),
+                      alignment: Alignment.center,
                       child: const Text(
-                        "Babe, I may not be your first date, kiss or love. but I want to be your last everything. You are the one I want to die knowing I've loved and married. 😉",
-                        textAlign: TextAlign.start,
+                        " I love you my med and I love you my Merissa.\nYou are the one for me!\n Live Forver!",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          "viewImagesPage",
-                          arguments: {
-                            "networkImage": "assets/images/collage5.jpg",
-                            "scaffoldBG": "Colors.greenAccent",
-                            "isAsset": true,
-                          },
-                        );
-                      },
-                      child: Image.asset("assets/images/collage5.jpg"),
-                    ),
-                    // ArcMeme #6
+                    const SizedBox(height: 10.0),
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10.0),
-                      alignment: Alignment.centerLeft,
+                          horizontal: 20.0, vertical: 10.0),
+                      alignment: Alignment.center,
                       child: const Text(
-                        "Also babe, You can 'lean' on me on your horrible days! I got you! 😉",
-                        textAlign: TextAlign.start,
+                        "💝😍🥰😘💝",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 35.0,
                         ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          "viewImagesPage",
-                          arguments: {
-                            "networkImage": "assets/images/collage7.jpg",
-                            "scaffoldBG": "Colors.greenAccent",
-                            "isAsset": true,
-                          },
-                        );
-                      },
-                      child: Image.asset("assets/images/collage7.jpg"),
-                    ),
-                    // ArcMeme #7
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15.0, vertical: 10.0),
-                      alignment: Alignment.centerLeft,
-                      child: const Text(
-                        "Also babe, You can 'lean' on me on your horrible days! I got you! 😉",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20.0,
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(
-                          context,
-                          "viewImagesPage",
-                          arguments: {
-                            "networkImage": "assets/images/collage8.jpg",
-                            "scaffoldBG": "Colors.greenAccent",
-                            "isAsset": true,
-                          },
-                        );
-                      },
-                      child: Image.asset("assets/images/collage8.jpg"),
                     ),
                     const SizedBox(height: 100.0),
                     // Continue Button
